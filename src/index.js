@@ -9,12 +9,19 @@ k=0;var a=[];
 
   a[k]=i;k++;
   }
-  node=0;s=0;
+  node=0;s=0;k=0;
 for (i=0;i<a.length ;i++){
-  if (base % a[i]==0) nod=a[i];
-}
+  if (base % a[i]==0){k=0;
+  while (base % a[i]==0){
+    base=base/a[i];
+    k++;
+
+nod=a[i];
+}}}
+
+
   for (i=nod;i<=number;i= i*nod){
       s=s+Math.floor(number/i);
     }
-return s;
+return Math.floor(s/k);
 }
